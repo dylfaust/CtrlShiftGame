@@ -1922,15 +1922,15 @@
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #FFFFFF;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #FFFFFF;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #ffffff;
 		}
 
 /* Image */
@@ -2641,7 +2641,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #505393;
 			color: #c7ebe8;
 		}
 
@@ -3160,7 +3160,7 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #505393;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3791,7 +3791,7 @@
 	}
 
 	body.landing #footer {
-		background-color: rgba(29, 36, 42, 0.9);
+		background-color: rgba(29, 36, 42, 1.0);
 	}
 
 	body.is-mobile.landing #page-wrapper {
