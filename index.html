@@ -63,8 +63,9 @@
 								<section class="work" style="text-align: center; margin: auto;">
 								  
 								  <figure class="Trailer">
-									<a class = "fancybox" rel="group" data-fancybox-type="iframe" href="https://www.youtube.com/embed/e-mch-GfM7s?autoplay=1" title="CtrlShift Teaser">
-									  <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i><!--<img src="http://static1.squarespace.com/static/55320e64e4b09e3f06137288/5532592ee4b0c242a8086e96/55482efde4b08ecb66506b92/1447825080369/" style="outline: #000000 solid 2px;" alt="" />-->
+									<a class = "fancybox" rel="group" data-fancybox-type="iframe" href="https://www.youtube.com/embed/e-mch-GfM7s?autoplay=1" title="">
+									  <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                                        <!--<img src="http://static1.squarespace.com/static/55320e64e4b09e3f06137288/5532592ee4b0c242a8086e96/55482efde4b08ecb66506b92/1447825080369/" style="outline: #000000 solid 2px;" alt="" />-->
 									  <dl>
 									  <!-- Caption -->
 										<dt style="font-size:100%"></dt>
@@ -219,7 +220,14 @@
 	
     $(document).ready(function()
 	{
-	  $(".fancybox").fancybox();
+        $(".fancybox").fancybox({
+            helpers: {
+                overlay: {
+                    locked: false
+                }
+            }
+
+        });
 	});
 
 	// Setup fancybox lightboxes when the window loads
@@ -251,10 +259,10 @@
 	  {
 		$('#all').addClass('current-li');
 	
-		$("nav > ul > li").click(function()
-		{
-			show(this.id);
-		}); 
+		//$("nav > ul > li").click(function()
+		//{
+		//	show(this.id);
+		//}); 
 	  });
 	}); 
   </script>
