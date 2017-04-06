@@ -10,6 +10,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<!-- Styling -->
+	<link rel="stylesheet" href="assets/Libs/Css/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="assets/Libs/Css/jquery.fancybox-buttons.css">
+	<link rel="stylesheet" href="assets/Libs/Css/jquery.fancybox.css">
+	
+	<!-- Scripts -->
+	<script src="assets/Libs/Js/jquery-1.11.3.min.js"></script>
+	<script src="assets/Libs/Js/jquery.fancybox.js"></script>
+	<script src="assets/Libs/Js/jquery.fancybox.pack.js"></script>
+	<script src="assets/Libs/Js/jquery.fancybox-thumbs.js"></script>
+	<script src="assets/Libs/Js/jquery.fancybox-media.js"></script>
+	<script src="assets/Libs/Js/jquery.fancybox-buttons.js"></script>
+	
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -21,9 +34,9 @@
 
                 
 				<!-- Header -->
-                <!--
+    
 					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
+						<h1><a href="index.html">CtrlShift</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -31,26 +44,36 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="generic.html">Blog</a></li>
+											<li><a href="elements.html">About</a></li>
 										</ul>
 									</div>
 								</li>
 							</ul>
 						</nav>
 					</header>
-                    -->
 
 				<!-- Banner -->
+					
 					<section id="banner">
 						<div class="inner">
 							<h2>CtrlShift</h2>
-							<p>Sneak, Hack, Escape<br /></p>
-							<!-- site template freebie<br />
-							crafted by <a href="http://html5up.net">HTML5 UP</a>.</p> -->
-							<ul class="actions">
+							<p>Sneak, Hack, Escape<br/></p>
+							<!-- Trailer Lightbox -->
+								<section class="work" style="text-align: center; margin: auto;">
+								  
+								  <figure class="Trailer">
+									<a class = "fancybox" rel="group" data-fancybox-type="iframe" href="https://www.youtube.com/embed/e-mch-GfM7s?autoplay=1" title="CtrlShift Teaser">
+									  <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i><!--<img src="http://static1.squarespace.com/static/55320e64e4b09e3f06137288/5532592ee4b0c242a8086e96/55482efde4b08ecb66506b92/1447825080369/" style="outline: #000000 solid 2px;" alt="" />-->
+									  <dl>
+									  <!-- Caption -->
+										<dt style="font-size:100%"></dt>
+									  </dl>
+									</a>	
+								  </figure>
+						
+								</section>
+							<!--<ul class="actions">-->
 								
                                 
                                 <!--<li><a href="#" class="button special">Activate</a></li> -->
@@ -180,13 +203,61 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!--<script src="assets/js/jquery.min.js"></script>-->
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			  <!-- Inline javascript -->
+	 <!-- Inline javascript -->
+  <script type='text/javascript'>
+	// Detect if there's web gl, alert the user if they don't have it
+
+	// Fancybox functions
+	
+    $(document).ready(function()
+	{
+	  $(".fancybox").fancybox();
+	});
+
+	// Setup fancybox lightboxes when the window loads
+	$(window).load(function()
+	{
+	// jQuery
+	  function scaleDown()
+	  {
+		$('.work > figure').removeClass('current').addClass('not-current');
+		$('nav > ul > li').removeClass('current-li');
+	  }
+	  
+	  function show(category)
+	  {
+		scaleDown();
+		$('#' + category).addClass('current-li');
+		$('.' + category).removeClass('not-current');
+		$('.' + category).addClass('current');
+	
+		if (category == "all")
+		{
+		  $('nav > ul > li').removeClass('current-li');
+		  $('#all').addClass('current-li');
+		  $('.work > figure').removeClass('current, not-current');
+		}
+	  }
+	  
+	  $(document).ready(function()
+	  {
+		$('#all').addClass('current-li');
+	
+		$("nav > ul > li").click(function()
+		{
+			show(this.id);
+		}); 
+	  });
+	}); 
+  </script>
 
 	</body>
 </html>
