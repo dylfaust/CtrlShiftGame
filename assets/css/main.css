@@ -7,6 +7,171 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Flex */
+
+	.flex {
+		display: -ms-flexbox;
+		-ms-flex-wrap: wrap;
+		-ms-flex-pack: justify;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+	}
+
+		.flex.flex-2 article {
+			width: 47%;
+		}
+
+		.flex.flex-3 article {
+			position: relative;
+			width: 28%;
+		}
+
+			.flex.flex-3 article:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				right: -2em;
+				top: 0;
+				border-right: 1px solid #dbdbdb;
+				pointer-events: none;
+			}
+
+			.flex.flex-3 article:last-child:before {
+				border: none;
+			}
+
+		.flex.flex-4 .box {
+			width: 21%;
+		}
+		.flex.flex-2 .box {
+			width: 47%; 
+		}
+
+		.flex.flex-1 .box {
+			width: 47%;
+			margin: auto;
+		}
+
+		
+		@media screen and (max-width: 480px) {
+
+			.flex.flex-4 .box {
+				width: 100%;
+			}
+
+		}
+
+.image.round img {
+			border-radius: 100%;
+			height: 130px;
+			width: 130px;
+		}
+
+
+		/* Box */
+
+	.box {
+		border: solid 1px #dbdbdb;
+		margin-bottom: 2em;
+		padding: 1.5em;
+	}
+
+		.box > :last-child,
+		.box > :last-child > :last-child,
+		.box > :last-child > :last-child > :last-child {
+			margin-bottom: 0;
+		}
+
+		.box.alt {
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+		}
+
+		.box.person {
+			border: solid 1px rgba(255, 255, 255, 0.25);
+			padding: 1.5em 1.5em;
+		}
+
+			.box.person h3 {
+				margin: 0;
+			}
+
+			.box.person .image {
+				margin-bottom: 1em;
+			}
+
+				.box.person .image img {
+					max-width: 100%;
+				}
+		
+		.TeamDesc
+		{
+			color:white;
+			font-size:15px;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.flex.flex-2 article {
+				width: 100%;
+				margin-bottom: 3em;
+			}
+
+				.flex.flex-2 article:last-child {
+					margin-bottom: 0;
+				}
+
+			.flex.flex-3 {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+			}
+
+				.flex.flex-3 article {
+					width: 100%;
+					border-bottom: 1px solid #dbdbdb;
+					padding-bottom: 2.5em;
+					margin-bottom: 3em;
+				}
+
+					.flex.flex-3 article:last-child {
+						border: none;
+						padding-bottom: 0;
+						margin: 0 0 1em 0;
+					}
+
+					.flex.flex-3 article:before {
+						display: none;
+					}
+
+			.flex.flex-4 .box {
+				width: 47%;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.flex.flex-4 .box {
+				width: 100%;
+			}
+
+		}
+
+
 /* --------------------------
 	Fancybox styling
 ----------------------------- */
@@ -35,7 +200,7 @@ a
 	line-height: 144px;
 	-webkit-filter: sepia(0.0);
 	position: relative;
-	padding-right: 15px;
+	padding-right: 0px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	margin-top: -20px;
@@ -3552,10 +3717,11 @@ a
 			height: 8.5em;
 			left: 50%;
 			letter-spacing: 0.225em;
-			margin-left: -8.5em;
+			margin-left: -7.7em;
 			opacity: 1;
 			outline: 0;
-			padding-left: 0.225em;
+			padding-left: 0em;
+
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
