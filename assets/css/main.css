@@ -187,11 +187,11 @@ a
 	text-align: center;
 }
 
-.work h2:hover
+.work figure:hover
 {
 	 color: #636363;
 }
-#one href:hover
+#one a:hover
 {
 	 color: #636363;
 }
