@@ -240,6 +240,11 @@ a
 	-ms-transition: 0.0s;
 }
 
+.demo figure:hover dl
+{
+	opacity: 1;
+}
+
 .work figure:hover dl
 {
 	opacity: 1;
